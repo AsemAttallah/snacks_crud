@@ -3,7 +3,6 @@
 <h1>Snacks List</h1>
 {% for snack in object_list %}
 <a href="{% url 'snack_detail' snack.id %}"><h2>{{snack.name}}</h2></a>
-<!-- <h2>{{snack.purchaser}}</h2>
-<h2>{{snack.description}}</h2> -->
 {% endfor %}
+<a href="{% url 'snack_create' %}"><input type="button" value="Add New Snack"></a>
 {% endblock %}

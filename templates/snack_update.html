@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+<a href="{% url 'snack_detail' snack.id %}"><input type="button" value="Back"></a>
 <h1>{{snack.name}} Update</h1>
 <form method="post">
     {% csrf_token %}

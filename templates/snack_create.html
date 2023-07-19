@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+<a href="{% url 'snack_list' %}"><input type="button" value="Back"></a>
 <h1>Snacks Form</h1>
 <form method="post">
     {% csrf_token %}

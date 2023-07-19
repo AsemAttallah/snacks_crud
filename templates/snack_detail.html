@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
+<a href="{% url 'snack_list' %}"><input type="button" value="Back"></a>
 <h1>Snacks Details</h1>
 
 <h2>Name : {{snack.name|capfirst}}</h2>
 <h2>Purchaser : {{snack.purchaser|capfirst}}</h2>
 <h2>Description : {{snack.description}}</h2>
-
+<a href="{% url 'snack_update' snack.id %}"><input type="button" value="Update"></a>
+<a href="{% url 'snack_delete' snack.id %}"><input type="button" value="Delete"></a>
 {% endblock %}
